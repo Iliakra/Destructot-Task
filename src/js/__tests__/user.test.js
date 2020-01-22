@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import showArms from '../app';
 
-let player = {
+const player = {
   name: 'Лучник',
   type: 'Bowman',
   health: 50,
@@ -13,18 +13,18 @@ let player = {
       id: 8,
       name: 'Двойной выстрел',
       icon: 'http://...',
-      description: 'Двойной выстрел наносит двойной урон'
-    }, 
+      description: 'Двойной выстрел наносит двойной урон',
+    },
     {
       id: 9,
       name: 'Нокаутирующий удар',
-      icon: 'http://...'
-    }
-  ]	
-}
+      icon: 'http://...',
+    },
+  ],
+};
 
 
-const{special} = player;
+const { special } = player;
 
 test('should return massive of objects with four props', () => {
   const received = showArms(special);
@@ -33,14 +33,14 @@ test('should return massive of objects with four props', () => {
       id: 8,
       name: 'Двойной выстрел',
       icon: 'http://...',
-      description: 'Двойной выстрел наносит двойной урон'
-    }, 
+      description: 'Двойной выстрел наносит двойной урон',
+    },
     {
       id: 9,
       name: 'Нокаутирующий удар',
       icon: 'http://...',
-      description: 'Описание недоступно'
-    }
-  ]	;
+      description: 'Описание недоступно',
+    },
+  ];
   expect(received).toEqual(expected);
 });
